@@ -12,14 +12,23 @@
 
 	
 	</form>
+
+	<script src="jquery.js"></script>
 <script>
-$(".nome-erro").submit(funcion( event) {
-	nometamanho =$("input").val().length();
-	console.writeln(nometamanho);
+
+  console.log('passou aqui');
+  alert('ola');
+
+$("form").submit(function( event) {
+	console.log('ooooo');
+
+
+	nometamanho =$("input").val().length;
+	console.log(nometamanho);
 
 	if ( nometamanho<5 ) {
 		$( ".nome-erro" ).show();
-		return;
+		return false;
 	}
     
     event.preventDefaut();
