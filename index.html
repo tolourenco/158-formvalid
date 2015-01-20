@@ -8,8 +8,14 @@
 	<form action="index.html" method="post">
 		<label>Nome</label>
 	<input id="nome" type="text" name="nome" value="">
-<span class="nome-erro">o nome deve ter mais de 3 letras</span>
+<span class="nome-erro">o nome deve ter mais de 5 letras</span>
 
+<label for="Password">Password</label>
+<input id="password" type="password" name="password" value="">Password</input>
+
+<label for="Password">Password confirm</label>
+<input id="password_confirm" type="password" name="password_confirm" value="">Password</input>
+<span class="nome-erro">As passwords devem ser iguais</span>
 	
 	</form>
 
@@ -17,7 +23,7 @@
 <script>
 
   console.log('passou aqui');
-  alert('ola');
+
 
 $("form").submit(function( event) {
 	console.log('ooooo');
@@ -30,8 +36,12 @@ $("form").submit(function( event) {
 		$( ".nome-erro" ).show();
 		return false;
 	}
+
+	$( ".nome-erro" ).hide();
     
-    event.preventDefaut();
+    event.preventDefault();
+
+    	//console.log(nometamanho);
 
 });
 </script>

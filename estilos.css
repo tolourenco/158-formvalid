@@ -2,6 +2,7 @@ body,
 input{
 	font-size: 3em;
 }
+.password-erro,
 .nome-erro{
 	display: none;
 }
