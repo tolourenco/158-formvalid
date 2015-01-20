@@ -38,6 +38,12 @@ $("form").submit(function( event) {
 	}
 
 	$( ".nome-erro" ).hide();
+
+	if ($("#password".val() != $("#password_confirm").val()<5 ) {
+		$( ".nome-erro" ).show();
+		return false;
+	}
+
     
     event.preventDefault();
 
